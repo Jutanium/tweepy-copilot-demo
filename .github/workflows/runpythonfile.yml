@@ -5,7 +5,7 @@ name: Run python file
 
 on:
   issues:
-    types: [opened]
+    types: [edited]
     
 jobs:
   conditional_step:
