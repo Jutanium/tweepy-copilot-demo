@@ -17,4 +17,4 @@ jobs:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: | 
-       echo https://github.com/${{ github.actor }}/issues/${{ github.event.issue.number }}
+       echo https://github.com/${{ github.actor }}/${{ github.event.repository.name }}/issues/${{ github.event.issue.number }}
