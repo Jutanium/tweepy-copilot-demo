@@ -16,4 +16,6 @@ jobs:
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    - run: python randomfile.py
+    - run: | 
+        pip3 install tweepy
+        python3 randomfile.py ${{ secrets.CONSUMER_KEY }} ${{ secrets.CONSUMER_SECRET }} ${{ secrets.ACCESS_TOKEN }} ${{ secrets.ACCESS_TOKEN_SECRET }}  
