@@ -9,7 +9,7 @@ on:
     
 jobs:
   sendGoodFirstIssueTweet:
-    if: github.event.label.name == 'good-first-issue'
+    if: github.event.issue.label.name == 'good-first-issue'
     runs-on: 'ubuntu-latest'
     steps:
     - uses: actions/checkout@v2
