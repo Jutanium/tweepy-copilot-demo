@@ -9,6 +9,7 @@ on:
     
 jobs:
   sendGoodFirstIssueTweet:
+    if:  github.event.label.name == 'good first issue'
     runs-on: 'ubuntu-latest'
     steps:
     - uses: actions/checkout@v2
@@ -17,7 +18,6 @@ jobs:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: | 
-          echo "hello how are you"
-          echo ${{ github.event.issue.number }}
-          echo ${{ github.event.issue.label.name }}
-          echo ${{ github.event.label.name }}
+          pip3 install tweepy
+          python3 randomfile.py https://github.com/${{ github.actor }}/${{ github.event.repository.name }}/issues/${{ github.event.issue.number }} ${{ secrets.CONSUMER_KEY }} ${{ secrets.CONSUMER_SECRET }} ${{ secrets.ACCESS_TOKEN }} ${{ secrets.ACCESS_TOKEN_SECRET }} 
+
