@@ -5,10 +5,11 @@ name: Run python file
 
 on:
   issues:
-    types: [edited]
+    types: [opened]
     
 jobs:
-  conditional_step:
+  sendGoodFirstIssueTweet:
+    if: github.event.label.name == 'good-first-issue'
     runs-on: 'ubuntu-latest'
     steps:
     - uses: actions/checkout@v2
