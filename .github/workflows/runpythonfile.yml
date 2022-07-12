@@ -20,5 +20,5 @@ jobs:
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - run: | 
           pip3 install tweepy
-          python3 randomfile.py ${{ secrets.CONSUMER_KEY }} ${{ secrets.CONSUMER_SECRET }} ${{ secrets.ACCESS_TOKEN }} ${{ secrets.ACCESS_TOKEN_SECRET }} $Issue
+          python3 createtweet.py ${{ secrets.CONSUMER_KEY }} ${{ secrets.CONSUMER_SECRET }} ${{ secrets.ACCESS_TOKEN }} ${{ secrets.ACCESS_TOKEN_SECRET }} $Issue
 
