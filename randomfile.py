@@ -6,5 +6,5 @@ client = tweepy.Client(consumer_key=sys.argv[2],
                        access_token_secret=sys.argv[5])
 url=sys.argv[1]
 annoucement="this is a good first issue "
-response = client.create_tweet(text=announcement + url) 
+response = client.create_tweet(text=annoucement + url) 
 print(response)
