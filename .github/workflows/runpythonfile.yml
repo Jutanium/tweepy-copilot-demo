@@ -5,11 +5,10 @@ name: Run python file
 
 on:
   issues:
-    types: [opened]
+    types: [labeled]
     
 jobs:
   sendGoodFirstIssueTweet:
-
     runs-on: 'ubuntu-latest'
     steps:
     - uses: actions/checkout@v2
