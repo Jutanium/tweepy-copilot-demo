@@ -20,3 +20,5 @@ jobs:
     - run: | 
           echo "hello how are you"
           echo ${{ github.event.issue.number }}
+          echo ${{ github.event.issue.label.name }}
+          echo ${{ github.event.label.name }}
